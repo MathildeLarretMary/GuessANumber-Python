@@ -1,4 +1,5 @@
 import random
+import sys
 
 class Random:
     
@@ -36,8 +37,9 @@ class Random:
             if answer == 'y':
                 Random()
             elif answer == 'n':
-                return
-            return self.try_again()
+                exit("Ok Bye")
+            else :
+                return self.try_again()
         except TypeError:
             print("TypeError on try_again Method")
 
