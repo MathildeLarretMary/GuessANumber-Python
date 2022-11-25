@@ -30,11 +30,14 @@ class Random:
             Random()
             exit(0)
             
-    def try_again(self) -> bool: 
+    def try_again(self) -> str: 
+        answer = input("Try Again ? ( Y / N ) => ").lower()
         try:        
-            if input("Try Again ? ( Y / N ) => ").lower() == 'y':
+            if answer == 'y':
                 Random()
-            return
+            elif answer == 'n':
+                return
+            return self.try_again()
         except TypeError:
             print("TypeError on try_again Method")
 
